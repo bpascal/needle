@@ -1,0 +1,73 @@
+#数据源基础信息
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://47.107.148.155:3306/needle?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&autoReconnect=true&failOverReadOnly=false
+    username: needle_adm
+    password: 49N36FTfZF
+    driverClassName: com.mysql.jdbc.Driver
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM t_pub_param
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat,wall,log4j
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000\
+  redis:
+    host: 47.92.24.144
+    port: 8998
+    database: 0
+    password: ddR7uO8a
+    timeout: 3000
+
+
+#服务相关参数
+server:
+  port: 8089
+
+#日志参数
+log:
+  path: /Users/bpascal/Documents/workspaces/ideaworkspace/lottostore/log
+
+#mybatis基础配置
+mybatis:
+  configuration:
+    mapUnderscoreToCamelCase: true
+
+#微信参数
+wx:
+  mp:
+    appId: wx6c88e29c7c621f1f
+    secret: 4bfdce612906f8eff8e738cf642918b0
+    token: LongLiveJB2099
+    aesKey: Xdku2WTJWpyo05qiOmnbqRRWMUvMxsKwZJmDsIbCgu4
+
+#服务路径相关
+#服务路径相关
+basecontext:
+  urlpath:
+    requestpath: http://mt.caishiduo.com
+    zdjlrequestpath: http://mt.zdjl.caishiduo.com
+  filepath:
+    picsavepath: /Users/bpascal/Desktop/
+    picrequestpath: http://mt.jiqibaba.com/resources/images/
+  serverpath:
+    serverip: 47.92.24.144
+    notifycontext: http://mt.caishiduo.com/lottostore-h5-cgi
+  mallpath:
+    mallbasepath: https://mt.jiqibaba.com/mall/
+
+#七牛云存储参数
+qiniu:
+  userparams:
+    accesskey: 111111
+    secretkey: 111111
+    imagebucket: 111111
+    filecontext: 111111

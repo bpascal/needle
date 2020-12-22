@@ -1,0 +1,6 @@
+rootProject.name = 'Needle'
+include 'Needle-core'
+include 'Needle-api-server'
+include 'Needle-job'
+include 'Needle-bui-server'
+
