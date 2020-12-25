@@ -16,22 +16,4 @@ public class EvnConfig {
 
     @Value("${spring.profiles.active}")
     private String evn;
-
-    @Value("${basecontext.urlpath.requestpath}")
-    private String urlRequestContext;
-
-    @Value("${basecontext.filepath.picsavepath}")
-    private String picSavePath;
-
-    @Value("${basecontext.filepath.picrequestpath}")
-    private String picRequestPath;
-
-    @Value("${basecontext.serverpath.serverip}")
-    private String serverIp;
-
-    @Value("${basecontext.serverpath.notifycontext}")
-    private String notifyContext;
-
-    @Value("${robotbasecontext.urlpath.transorderpath}")
-    private String terminalContext;
 }

@@ -16,7 +16,4 @@ public class EvnConfig {
 
     @Value("${spring.profiles.active}")
     private String evn;
-
-    @Value("${basecontext.urlpath.requestpath}")
-    private String urlRequestContext;
 }
