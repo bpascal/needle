@@ -1,4 +1,4 @@
-package com.codido.needle.core.util;
+package com.codido.needle.core.common.util;
 
 import org.apache.commons.codec.binary.Base64;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;

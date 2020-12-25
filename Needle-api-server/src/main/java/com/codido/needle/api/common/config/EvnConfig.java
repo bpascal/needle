@@ -1,4 +1,4 @@
-package com.codido.needle.core.common.config;
+package com.codido.needle.api.common.config;
 
 
 import lombok.Data;
