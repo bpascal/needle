@@ -1,4 +1,4 @@
-package com.codido.needle.core.util;
+package com.codido.needle.core.common.util;
 
 import java.io.IOException;
 import java.io.InputStream;

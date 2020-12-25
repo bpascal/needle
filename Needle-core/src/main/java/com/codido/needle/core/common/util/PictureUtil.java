@@ -1,4 +1,4 @@
-package com.codido.needle.core.util;
+package com.codido.needle.core.common.util;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
