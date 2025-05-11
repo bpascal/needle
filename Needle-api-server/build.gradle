@@ -32,7 +32,7 @@ configurations {
 }
 
 dependencies {
-    compile project(':Needle-core')
+    implementation project(':Needle-core')
 
     implementation('org.springframework.boot:spring-boot-starter-web')
     implementation("org.springframework.boot:spring-boot-starter-jetty:1.4.1.RELEASE")
