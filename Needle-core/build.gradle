@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '2.1.2.RELEASE'
+        springBootVersion = '2.7.18'
     }
     repositories {
         mavenCentral()
@@ -21,6 +21,11 @@ apply plugin: 'io.spring.dependency-management'
 sourceCompatibility = 1.8
 
 bootJar {
+    enabled = false
+}
+
+//库模块无唯一主类，禁用bootJar的同时需禁用其主类探测任务（禁用任务不会移除其依赖任务）
+tasks.named('bootJarMainClassName') {
     enabled = false
 }
 
@@ -46,7 +51,7 @@ dependencies {
 
     implementation('com.google.code.gson:gson:2.8.2')
     implementation("com.alibaba:fastjson:1.2.15")
-    compileOnly "org.projectlombok:lombok:1.16.10"
+    compileOnly "org.projectlombok:lombok:1.18.30"
     implementation("org.slf4j:slf4j-api:1.7.21")
     implementation("ch.qos.logback:logback-classic:1.1.7")
 
@@ -60,24 +65,13 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation "org.dom4j:dom4j:2.0.0"
-    runtimeOnly 'mysql:mysql-connector-java'
+    runtimeOnly 'com.mysql:mysql-connector-j'
     //implementation "org.projectlombok:lombok:1.16.20"
-    annotationProcessor 'org.projectlombok:lombok:1.18.2'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
 //    compileOnly 'org.projectlombok:lombok:1.18.8'
 
     implementation 'org.bouncycastle:bcprov-jdk15on:1.60'
 
-}
-
-sourceSets {
-    main {
-        java {
-            srcDir 'src/main/java'
-        }
-        resources {
-            srcDir 'src/main/resources'
-        }
-    }
 }
 
 //mybatis generator plugin ------ start
